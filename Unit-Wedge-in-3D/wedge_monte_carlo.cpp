@@ -13,17 +13,12 @@ using namespace std;
 double *monomial_value ( int m, int n, int e[], double x[] )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    MONOMIAL_VALUE evaluates a monomial.
 //    This routine evaluates a monomial of the form
 //
 //      product ( 1 <= i <= m ) x(i)^e(i)
 //
 //    The combination 0.0^0 is encountered is treated as 1.0.
-//
-//  Parameters:
 //
 //    Input, int M, the spatial dimension.
 //
@@ -64,13 +59,8 @@ double *monomial_value ( int m, int n, int e[], double x[] )
 double r8vec_sum ( int n, double a[] )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    R8VEC_SUM returns the sum of an R8VEC.
 //    An R8VEC is a vector of R8's.
-//
-//  Parameters:
 //
 //    Input, int N, the number of entries in the vector.
 //
@@ -94,9 +84,6 @@ double r8vec_sum ( int n, double a[] )
 double *r8vec_uniform_01_new ( int n, int &seed )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    R8VEC_UNIFORM_01_NEW returns a new unit pseudorandom R8VEC.
 //
 //    This routine implements the recursion
@@ -106,37 +93,6 @@ double *r8vec_uniform_01_new ( int n, int &seed )
 //
 //    The integer arithmetic never requires more than 32 bits,
 //    including a sign bit.
-//
-//  Reference:
-//
-//    Paul Bratley, Bennett Fox, Linus Schrage,
-//    A Guide to Simulation,
-//    Second Edition,
-//    Springer, 1987,
-//    ISBN: 0387964673,
-//    LC: QA76.9.C65.B73.
-//
-//    Bennett Fox,
-//    Algorithm 647:
-//    Implementation and Relative Efficiency of Quasirandom
-//    Sequence Generators,
-//    ACM Transactions on Mathematical Software,
-//    Volume 12, Number 4, December 1986, pages 362-376.
-//
-//    Pierre L'Ecuyer,
-//    Random Number Generation,
-//    in Handbook of Simulation,
-//    edited by Jerry Banks,
-//    Wiley, 1998,
-//    ISBN: 0471134031,
-//    LC: T57.62.H37.
-//
-//    Peter Lewis, Allen Goodman, James Miller,
-//    A Pseudo-Random Number Generator for the System/360,
-//    IBM Systems Journal,
-//    Volume 8, Number 2, 1969, pages 136-143.
-//
-//  Parameters:
 //
 //    Input, int N, the number of entries in the vector.
 //
@@ -181,9 +137,6 @@ double *r8vec_uniform_01_new ( int n, int &seed )
 void timestamp ( )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    TIMESTAMP prints the current YMDHMS date as a time stamp.
 //
 {
@@ -209,9 +162,6 @@ void timestamp ( )
 double wedge01_integral ( int e[] )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    WEDGE01_INTEGRAL returns the integral of a monomial in the unit wedge in 3D.
 //
 //    This routine returns the integral of
@@ -226,16 +176,6 @@ double wedge01_integral ( int e[] )
 //      0 <= Y
 //      X + Y <= 1
 //      -1 <= Z <= 1.
-//
-//  Reference:
-//
-//    Arthur Stroud,
-//    Approximate Calculation of Multiple Integrals,
-//    Prentice Hall, 1971,
-//    ISBN: 0130438936,
-//    LC: QA311.S85.
-//
-//  Parameters:
 //
 //    Input, int E[3], the exponents.
 //
@@ -287,21 +227,7 @@ double wedge01_integral ( int e[] )
 double *wedge01_sample ( int n, int &seed )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //   WEDGE01_SAMPLE samples points uniformly from the unit wedge in 3D.
-//
-//  Reference:
-//
-//    Reuven Rubinstein,
-//    Monte Carlo Optimization, Simulation, and Sensitivity 
-//    of Queueing Networks,
-//    Krieger, 1992,
-//    ISBN: 0894647644,
-//    LC: QA298.R79.
-//
-//  Parameters:
 //
 //    Input, int N, the number of points.
 //
@@ -348,9 +274,6 @@ double *wedge01_sample ( int n, int &seed )
 double wedge01_volume ( )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    WEDGE01_VOLUME returns the volume of the unit wedge in 3D.
 //
 //    The unit wedge is:
@@ -359,8 +282,6 @@ double wedge01_volume ( )
 //      0 <= Y
 //      X + Y <= 1
 //      -1 <= Z <= 1.
-//
-//  Parameters:
 //
 //    Output, double WEDGE01_VOLUME, the volume of the unit wedge.
 //
