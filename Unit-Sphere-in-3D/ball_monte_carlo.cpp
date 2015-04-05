@@ -13,9 +13,6 @@ using namespace std;
 double ball01_monomial_integral ( int e[3] )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    BALL01_MONOMIAL_INTEGRAL returns monomial integrals in the unit ball.
 //
 //    The integration region is 
@@ -23,15 +20,6 @@ double ball01_monomial_integral ( int e[3] )
 //      X^2 + Y^2 + Z^2 <= 1.
 //
 //    The monomial is F(X,Y,Z) = X^E(1) * Y^E(2) * Z^E(3).
-//
-//  Reference:
-//
-//    Philip Davis, Philip Rabinowitz,
-//    Methods of Numerical Integration,
-//    Second Edition,
-//    Academic Press, 1984, page 263.
-//
-//  Parameters:
 //
 //    Input, int E[3], the exponents of X, Y and Z in the 
 //    monomial.  Each exponent must be nonnegative.
@@ -92,27 +80,7 @@ double ball01_monomial_integral ( int e[3] )
 double *ball01_sample ( int n, int &seed )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    BALL01_SAMPLE uniformly samples points from the unit ball.
-//
-//  Reference:
-//
-//    Russell Cheng,
-//    Random Variate Generation,
-//    in Handbook of Simulation,
-//    edited by Jerry Banks,
-//    Wiley, 1998, pages 168.
-//
-//    Reuven Rubinstein,
-//    Monte Carlo Optimization, Simulation, and Sensitivity 
-//    of Queueing Networks,
-//    Krieger, 1992,
-//    ISBN: 0894647644,
-//    LC: QA298.R79.
-//
-//  Parameters:
 //
 //    Input, int N, the number of points.
 //
@@ -163,12 +131,7 @@ double *ball01_sample ( int n, int &seed )
 double ball01_volume ( )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    BALL01_VOLUME returns the volume of the unit ball.
-//
-//  Parameters:
 //
 //    Output, double BALL01_VOLUME, the volume of the unit ball.
 //
@@ -188,39 +151,18 @@ double ball01_volume ( )
 double r8_gamma ( double x )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
-//    R8_GAMMA evaluates Gamma(X) for an R8.
-//
 //    The C MATH library includes a function GAMMA ( X ) which should be
 //    invoked instead of this function.
 //
 //    This routine calculates the gamma function for a real argument X.
 //
-//    Computation is based on an algorithm outlined in reference 1.
+//    Computation is based on an algorithm outlined in Cody's
+//    An Overview of Software Development for Special Functions.
 //    The program uses rational functions that approximate the gamma
 //    function to at least 20 significant decimal digits.  Coefficients
 //    for the approximation over the interval (1,2) are unpublished.
-//    Those for the approximation for 12 <= X are from reference 2.
-//
-//  Reference:
-//
-//    William Cody,
-//    An Overview of Software Development for Special Functions,
-//    in Numerical Analysis Dundee, 1975,
-//    edited by GA Watson,
-//    Lecture Notes in Mathematics 506,
-//    Springer, 1976.
-//
-//    John Hart, Ward Cheney, Charles Lawson, Hans Maehly,
-//    Charles Mesztenyi, John Rice, Henry Thatcher,
-//    Christoph Witzgall,
-//    Computer Approximations,
-//    Wiley, 1968,
-//    LC: QA297.C64.
-//
-//  Parameters:
+//    Those for the approximation for 12 <= X are from Hart et.al
+//    Computer Approximations
 //
 //    Input, double X, the argument of the function.
 //
@@ -419,11 +361,6 @@ double r8_gamma ( double x )
 double r8_uniform_01 ( int &seed )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
-//    R8_UNIFORM_01 returns a unit pseudorandom R8.
-//
 //    This routine implements the recursion
 //
 //      seed = ( 16807 * seed ) mod ( 2^31 - 1 )
@@ -440,37 +377,6 @@ double r8_uniform_01 ( int &seed )
 //         12345   207482415  0.096616
 //     207482415  1790989824  0.833995
 //    1790989824  2035175616  0.947702
-//
-//  Reference:
-//
-//    Paul Bratley, Bennett Fox, Linus Schrage,
-//    A Guide to Simulation,
-//    Second Edition,
-//    Springer, 1987,
-//    ISBN: 0387964673,
-//    LC: QA76.9.C65.B73.
-//
-//    Bennett Fox,
-//    Algorithm 647:
-//    Implementation and Relative Efficiency of Quasirandom
-//    Sequence Generators,
-//    ACM Transactions on Mathematical Software,
-//    Volume 12, Number 4, December 1986, pages 362-376.
-//
-//    Pierre L'Ecuyer,
-//    Random Number Generation,
-//    in Handbook of Simulation,
-//    edited by Jerry Banks,
-//    Wiley, 1998,
-//    ISBN: 0471134031,
-//    LC: T57.62.H37.
-//
-//    Peter Lewis, Allen Goodman, James Miller,
-//    A Pseudo-Random Number Generator for the System/360,
-//    IBM Systems Journal,
-//    Volume 8, Number 2, 1969, pages 136-143.
-//
-//  Parameters:
 //
 //    Input/output, int &SEED, the "seed" value.  Normally, this
 //    value should not be 0.  On output, SEED has been updated.
@@ -508,30 +414,7 @@ double r8_uniform_01 ( int &seed )
 double *r8mat_normal_01_new ( int m, int n, int &seed )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    R8MAT_NORMAL_01_NEW returns a unit pseudonormal R8MAT.
-//
-//  Reference:
-//
-//    Paul Bratley, Bennett Fox, Linus Schrage,
-//    A Guide to Simulation,
-//    Springer Verlag, pages 201-202, 1983.
-//
-//    Bennett Fox,
-//    Algorithm 647:
-//    Implementation and Relative Efficiency of Quasirandom
-//    Sequence Generators,
-//    ACM Transactions on Mathematical Software,
-//    Volume 12, Number 4, pages 362-376, 1986.
-//
-//    Peter Lewis, Allen Goodman, James Miller,
-//    A Pseudo-Random Number Generator for the System/360,
-//    IBM Systems Journal,
-//    Volume 8, pages 136-143, 1969.
-//
-//  Parameters:
 //
 //    Input, int M, N, the number of rows and columns in the array.
 //
@@ -552,9 +435,6 @@ double *r8mat_normal_01_new ( int m, int n, int &seed )
 double *r8vec_normal_01_new ( int n, int &seed )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    R8VEC_NORMAL_01_NEW returns a unit pseudonormal R8VEC.
 //
 //    An R8VEC is a vector of R8's.
@@ -562,15 +442,11 @@ double *r8vec_normal_01_new ( int n, int &seed )
 //    The standard normal probability distribution function (PDF) has
 //    mean 0 and standard deviation 1.
 //
-//  Parameters:
-//
 //    Input, int N, the number of values desired.
 //
 //    Input/output, int &SEED, a seed for the random number generator.
 //
 //    Output, double R8VEC_NORMAL_01_NEW[N], a sample of the standard normal PDF.
-//
-//  Local parameters:
 //
 //    Local, double R[N+1], is used to store some uniform random values.
 //    Its dimension is N+1, but really it is only needed to be the
@@ -655,14 +531,9 @@ double *r8vec_normal_01_new ( int n, int &seed )
 double r8vec_sum ( int n, double a[] )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    R8VEC_SUM returns the sum of an R8VEC.
 //
 //    An R8VEC is a vector of R8's.
-//
-//  Parameters:
 //
 //    Input, int N, the number of entries in the vector.
 //
@@ -686,9 +557,6 @@ double r8vec_sum ( int n, double a[] )
 double *r8vec_uniform_01_new ( int n, int &seed )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    R8VEC_UNIFORM_01_NEW returns a new unit pseudorandom R8VEC.
 //
 //    This routine implements the recursion
@@ -698,37 +566,6 @@ double *r8vec_uniform_01_new ( int n, int &seed )
 //
 //    The integer arithmetic never requires more than 32 bits,
 //    including a sign bit.
-//
-//  Reference:
-//
-//    Paul Bratley, Bennett Fox, Linus Schrage,
-//    A Guide to Simulation,
-//    Second Edition,
-//    Springer, 1987,
-//    ISBN: 0387964673,
-//    LC: QA76.9.C65.B73.
-//
-//    Bennett Fox,
-//    Algorithm 647:
-//    Implementation and Relative Efficiency of Quasirandom
-//    Sequence Generators,
-//    ACM Transactions on Mathematical Software,
-//    Volume 12, Number 4, December 1986, pages 362-376.
-//
-//    Pierre L'Ecuyer,
-//    Random Number Generation,
-//    in Handbook of Simulation,
-//    edited by Jerry Banks,
-//    Wiley, 1998,
-//    ISBN: 0471134031,
-//    LC: T57.62.H37.
-//
-//    Peter Lewis, Allen Goodman, James Miller,
-//    A Pseudo-Random Number Generator for the System/360,
-//    IBM Systems Journal,
-//    Volume 8, Number 2, 1969, pages 136-143.
-//
-//  Parameters:
 //
 //    Input, int N, the number of entries in the vector.
 //
@@ -773,9 +610,6 @@ double *r8vec_uniform_01_new ( int n, int &seed )
 void timestamp ( )
 
 //****************************************************************************80
-//
-//  Purpose:
-//
 //    TIMESTAMP prints the current YMDHMS date as a time stamp.
 //
 {
