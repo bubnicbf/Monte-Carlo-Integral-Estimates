@@ -6,7 +6,7 @@
 
 using namespace std;
 
-# include "wedge_monte_carlo.hpp"
+# include "wedge_monte_carlo.h"
 
 //****************************************************************************80
 
