@@ -1,4 +1,4 @@
-#WEDGE_MONTE_CARLO 
+#Monte Carlo Integral Estimates over the Unit Wedge in 3D
 
 C++ library which uses the Monte Carlo method to estimate the integral of a function over the interior of the unit wedge in 3D
 
