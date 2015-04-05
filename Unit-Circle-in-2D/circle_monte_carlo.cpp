@@ -17,9 +17,6 @@ double circle01_length ( )
 //  Purpose:
 //
 //    CIRCLE01_LENGTH: length of the circumference of the unit circle in 2D.
-//
-//  Parameters:
-//
 //    Output, double CIRCLE01_LENGTH, the length.
 //
 {
@@ -46,15 +43,6 @@ double circle01_monomial_integral ( int e[2] )
 //      X^2 + Y^2 = 1.
 //
 //    The monomial is F(X,Y) = X^E(1) * Y^E(2).
-//
-//  Reference:
-//
-//    Philip Davis, Philip Rabinowitz,
-//    Methods of Numerical Integration,
-//    Second Edition,
-//    Academic Press, 1984, page 263.
-//
-//  Parameters:
 //
 //    Input, int E[2], the exponents of X and Y in the 
 //    monomial.  Each exponent must be nonnegative.
@@ -104,24 +92,6 @@ double *circle01_sample ( int n, int &seed )
 //  Purpose:
 //
 //    CIRCLE01_SAMPLE samples the circumference of the unit circle in 2D.
-//
-//  Reference:
-//
-//    Russell Cheng,
-//    Random Variate Generation,
-//    in Handbook of Simulation,
-//    edited by Jerry Banks,
-//    Wiley, 1998, pages 168.
-//
-//    Reuven Rubinstein,
-//    Monte Carlo Optimization, Simulation, and Sensitivity 
-//    of Queueing Networks,
-//    Krieger, 1992,
-//    ISBN: 0894647644,
-//    LC: QA298.R79.
-//
-//  Parameters:
-//
 //    Input, int N, the number of points.
 //
 //    Input/output, int &SEED, a seed for the random 
@@ -169,29 +139,13 @@ double r8_gamma ( double x )
 //
 //    This routine calculates the gamma function for a real argument X.
 //
-//    Computation is based on an algorithm outlined in reference 1.
+//    Computation is based on an algorithm outlined in Cody's
+//    An Overview of Software Development for Special Functions.
 //    The program uses rational functions that approximate the gamma
 //    function to at least 20 significant decimal digits.  Coefficients
 //    for the approximation over the interval (1,2) are unpublished.
-//    Those for the approximation for 12 <= X are from reference 2.
-//
-//  Reference:
-//
-//    William Cody,
-//    An Overview of Software Development for Special Functions,
-//    in Numerical Analysis Dundee, 1975,
-//    edited by GA Watson,
-//    Lecture Notes in Mathematics 506,
-//    Springer, 1976.
-//
-//    John Hart, Ward Cheney, Charles Lawson, Hans Maehly,
-//    Charles Mesztenyi, John Rice, Henry Thatcher,
-//    Christoph Witzgall,
-//    Computer Approximations,
-//    Wiley, 1968,
-//    LC: QA297.C64.
-//
-//  Parameters:
+//    Those for the approximation for 12 <= X are from Hart et.al
+//    Computer Approximations
 //
 //    Input, double X, the argument of the function.
 //
@@ -397,8 +351,6 @@ double r8vec_sum ( int n, double a[] )
 //
 //    An R8VEC is a vector of R8's.
 //
-//  Parameters:
-//
 //    Input, int N, the number of entries in the vector.
 //
 //    Input, double A[N], the vector.
@@ -433,37 +385,6 @@ double *r8vec_uniform_01_new ( int n, int &seed )
 //
 //    The integer arithmetic never requires more than 32 bits,
 //    including a sign bit.
-//
-//  Reference:
-//
-//    Paul Bratley, Bennett Fox, Linus Schrage,
-//    A Guide to Simulation,
-//    Second Edition,
-//    Springer, 1987,
-//    ISBN: 0387964673,
-//    LC: QA76.9.C65.B73.
-//
-//    Bennett Fox,
-//    Algorithm 647:
-//    Implementation and Relative Efficiency of Quasirandom
-//    Sequence Generators,
-//    ACM Transactions on Mathematical Software,
-//    Volume 12, Number 4, December 1986, pages 362-376.
-//
-//    Pierre L'Ecuyer,
-//    Random Number Generation,
-//    in Handbook of Simulation,
-//    edited by Jerry Banks,
-//    Wiley, 1998,
-//    ISBN: 0471134031,
-//    LC: T57.62.H37.
-//
-//    Peter Lewis, Allen Goodman, James Miller,
-//    A Pseudo-Random Number Generator for the System/360,
-//    IBM Systems Journal,
-//    Volume 8, Number 2, 1969, pages 136-143.
-//
-//  Parameters:
 //
 //    Input, int N, the number of entries in the vector.
 //
