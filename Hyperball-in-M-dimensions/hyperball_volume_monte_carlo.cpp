@@ -6,6 +6,8 @@
 
 using namespace std;
 
+# include "hyperball_volume_monte_carlo.h"
+
 //****************************************************************************80
 
 int main ( int argc, char *argv[] )
